@@ -1,0 +1,13 @@
+__pycache__/
+.venv/
+build/
+.vs/
+*.exe
+*.obj
+*.o
+*.aux
+*.log
+*.out
+datos/Online Retail.xlsx
+resultados_local/
+graficos_local/
