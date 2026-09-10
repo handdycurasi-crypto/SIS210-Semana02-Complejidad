@@ -1,0 +1,30 @@
+
+Datos: [10, 20, 30, 40, 50, 60, 70]
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opción: Clave entera: Posición (base 0): 3; comparaciones/sondeos: 4; tiempo: 1923 ns
+
+Datos: [10, 20, 30, 40, 50, 60, 70]
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opción: Clave entera: Posición (base 0): 3; comparaciones/sondeos: 1; tiempo: 1001 ns
+
+Datos: [10, 20, 30, 40, 50, 60, 70]
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opción: 
+Datos: [70, 20, 30, 40, 50, 60, 10]
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opción: Clave entera: Entrada inválida: La búsqueda binaria requiere datos ordenados. Ordena primero.
+
+Datos: [70, 20, 30, 40, 50, 60, 10]
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opción: 
+Datos: [10, 20, 30, 40, 50, 60, 70]
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opción: Clave entera: Posición (base 0): 0; comparaciones/sondeos: 3; tiempo: 1432 ns
+
+Datos: [10, 20, 30, 40, 50, 60, 70]
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opción: Clave entera: Entrada inválida: invalid literal for int() with base 10: 'abc'
+
+Datos: [10, 20, 30, 40, 50, 60, 70]
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opción: 

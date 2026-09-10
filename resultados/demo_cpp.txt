@@ -1,0 +1,30 @@
+
+Datos: 10 20 30 40 50 60 70 
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opcion: Clave entera: Posicion (base 0): 3; comparaciones/sondeos: 4; tiempo: 90 ns
+
+Datos: 10 20 30 40 50 60 70 
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opcion: Clave entera: Posicion (base 0): 3; comparaciones/sondeos: 1; tiempo: 40 ns
+
+Datos: 10 20 30 40 50 60 70 
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opcion: 
+Datos: 70 20 30 40 50 60 10 
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opcion: Clave entera: Entrada invalida: Binaria requiere datos ordenados. Usa ordenar primero.
+
+Datos: 70 20 30 40 50 60 10 
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opcion: 
+Datos: 10 20 30 40 50 60 70 
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opcion: Clave entera: Posicion (base 0): 0; comparaciones/sondeos: 3; tiempo: 60 ns
+
+Datos: 10 20 30 40 50 60 70 
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opcion: Clave entera: Entrada invalida: stoll
+
+Datos: 10 20 30 40 50 60 70 
+1: lineal | 2: binaria | 3: desordenar | 4: ordenar | 0: salir
+Opcion: 

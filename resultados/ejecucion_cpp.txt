@@ -1,0 +1,5 @@
+C++: n=100 completado; control=318
+C++: n=1000 completado; control=2592
+C++: n=10000 completado; control=28775
+C++: n=100000 completado; control=239360
+C++: n=500000 completado; control=1108140

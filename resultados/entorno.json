@@ -1,0 +1,27 @@
+{
+  "etiqueta": "Entorno remoto de Work",
+  "fecha_utc": "2026-09-10T16:21:19.052980+00:00",
+  "so": "Linux-6.18.35-x86_64-with-glibc2.39",
+  "cpu_visible": "AMD EPYC 9V74 80-Core Processor",
+  "ram_visible": "MemTotal:       16399700 kB",
+  "cpu_logicas_visibles": 9,
+  "limites_cgroup": {
+    "/sys/fs/cgroup/memory.max": "15032385536",
+    "/sys/fs/cgroup/cpu.max": "800000 100000"
+  },
+  "python": "3.12.14",
+  "compilador": "g++ (Ubuntu 13.3.0-6ubuntu2~24.04) 13.3.0\nCopyright (C) 2023 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+  "flags_declarados": "-std=c++20 -O2 -Wall -Wextra -pedantic",
+  "bibliotecas": {
+    "pandas": "2.2.3",
+    "matplotlib": "3.10.8",
+    "openpyxl": "3.1.5"
+  },
+  "reloj_python": {
+    "implementacion": "clock_gettime(CLOCK_MONOTONIC)",
+    "resolucion_s": 1e-09,
+    "monotonico": true
+  },
+  "reloj_cpp": "std::chrono::steady_clock; duration_cast<nanoseconds>",
+  "advertencia": "La memoria visible del huésped no necesariamente es la cuota del contenedor. Los flags deben coincidir con el comando de compilación."
+}

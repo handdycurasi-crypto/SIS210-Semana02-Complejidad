@@ -1,0 +1,8 @@
+test_errores_dataset (__main__.Pruebas.test_errores_dataset) ... ok
+test_oraculo (__main__.Pruebas.test_oraculo) ... ok
+test_orden_y_demo (__main__.Pruebas.test_orden_y_demo) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.168s
+
+OK

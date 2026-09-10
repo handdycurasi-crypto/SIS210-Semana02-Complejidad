@@ -1,0 +1,50 @@
+{
+  "fuente": "https://archive.ics.uci.edu/dataset/352/online+retail",
+  "doi": "10.24432/C5BW33",
+  "licencia": "CC BY 4.0",
+  "original_sha256": "43465a06f2ccf7c8b5bd2892bc7defb52f97487934fe93b16ae4c3936424676d",
+  "filas_originales": 541909,
+  "faltantes_customerid": 135080,
+  "descartadas": 135080,
+  "filas_validas": 406829,
+  "customerid_distintos": 4372,
+  "duplicados_adicionales_customerid": 402457,
+  "muestras": [
+    {
+      "n": 100,
+      "semilla": 21102,
+      "con_reemplazo": false,
+      "customerid_distintos": 87,
+      "sha256": "40d54733ca86672aedc46440a05560029bba5285184857c6923bf89ff6d558b7"
+    },
+    {
+      "n": 1000,
+      "semilla": 22002,
+      "con_reemplazo": false,
+      "customerid_distintos": 703,
+      "sha256": "47be3716d5ac4691afd7bb10ad66ea9e9b65273c440b14fbaf1b0233cdfdb828"
+    },
+    {
+      "n": 10000,
+      "semilla": 31002,
+      "con_reemplazo": false,
+      "customerid_distintos": 2667,
+      "sha256": "87cc1bcd55a7b584a327e48c00f6edfa64a73661e833dc89a24d282d04ec233d"
+    },
+    {
+      "n": 100000,
+      "semilla": 121002,
+      "con_reemplazo": false,
+      "customerid_distintos": 4182,
+      "sha256": "44a1e42e3c057d5282972731451725ef24f03bb1e8b188049b684585ae4e4fe6"
+    },
+    {
+      "n": 500000,
+      "semilla": 521002,
+      "con_reemplazo": true,
+      "customerid_distintos": 4344,
+      "sha256": "76863d725697b95fe60a316070be546aa7e56c9e577bb19dac9f0cec4a87a664"
+    }
+  ],
+  "diseno": "Muestreo de filas; tres claves de multiplicidad 1 se permutan al inicio, centro y final. El multiconjunto no cambia. No representa consultas promedio aleatorias."
+}

@@ -1,0 +1,3 @@
+2400 búsquedas reales; 80 combinaciones; mínimo 30 repeticiones.
+Python y C++ coinciden en clave, posición y sondeos.
+Ordenamientos separados: 300.
