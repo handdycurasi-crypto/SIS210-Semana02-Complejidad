@@ -50,6 +50,9 @@ Escuela Profesional de Ingeniería de Sistemas\par
 YANA MENDOZA CARLOS BENEDICTO\par
 BELIZARIO YANA DAVID VICTOR\par
 CURASI ZEVALLOS HANDDY RONALD\par
+\vspace{0.8cm}
+\textbf{Repositorio GitHub:}\par
+\href{https://github.com/handdycurasi-crypto/SIS210-Semana02-Complejidad}{\texttt{github.com/handdycurasi-crypto/SIS210-Semana02-Complejidad}}\par
 \vfill
 {\large Puno -- Perú\par 2026\par}
 \end{titlepage}
@@ -177,18 +180,18 @@ Los sondeos siguen la teoría, pero las medianas temporales no son funciones pur
 
 Se usa una sola muestra por tamaño, 30 repeticiones de cada clave y calentamiento; por tanto no hay inferencia estadística sobre todas las transacciones o sobre consultas en frío. Las claves únicas elegidas condicionan deliberadamente los escenarios; los duplicados restantes se conservan y el tamaño 500\,000 usa reemplazo. El centro no estima por sí solo el caso promedio. Los estadísticos son descriptivos y no se construyeron intervalos de confianza.
 
-La amortización supone costos por consulta estables y excluye copia, carga y actualizaciones. Una tabla hash podría ofrecer búsqueda esperada constante con memoria y colisiones; un árbol equilibrado ofrece búsqueda y actualización logarítmicas. Elegir una estructura requiere considerar el trabajo completo, no solo una llamada (Skiena, 2020). Las demos y pruebas se ejecutaron en Linux/GCC; Windows/MSVC queda como comprobación local, con instrucciones preparadas para Visual Studio y VS Code.
+La amortización supone costos por consulta estables y excluye copia, carga y actualizaciones. Una tabla hash podría ofrecer búsqueda esperada constante con memoria y colisiones; un árbol equilibrado ofrece búsqueda y actualización logarítmicas. Elegir una estructura requiere considerar el trabajo completo, no solo una llamada (Skiena, 2020). Los benchmarks y pruebas automatizadas se ejecutaron en el entorno remoto Linux/GCC de Work. La demo fue reproducida además en la PC del estudiante con Windows 10, Python 3.14.5 y MinGW GCC 14.2.0 incluido con Code::Blocks; se comprobó búsqueda lineal, búsqueda binaria y el rechazo de la búsqueda binaria cuando los datos están desordenados.
 
 \titulo{8. Conclusiones}
 \begin{enumerate}
 \item La búsqueda lineal verifica costo constante al inicio y crecimiento lineal en centro, final y ausencia. Binaria respeta el límite logarítmico y necesita orden previo. Los conteos concuerdan en ambos lenguajes.
 \item Las cotas $O$, $\Omega$ y $\Theta$ describen funciones de costo, mientras los casos describen entradas o distribuciones. Los tiempos observados no reemplazan la derivación RAM.
 \item Ordenar puede compensar con suficientes consultas, pero no siempre con una sola ni para objetivos al inicio. Los umbrales calculados pertenecen a esta sesión y sus supuestos.
-\item Los datos con procedencia, crudos, versiones, pruebas y comandos permiten repetir el experimento. Los estudiantes deben ejecutar la demo en su PC y crear los commits reales antes de publicar el repositorio.
+\item Los datos con procedencia, crudos, versiones, pruebas y comandos permiten repetir el experimento. La demo se reprodujo localmente en Windows y el repositorio se publicó con commits reales separados en \texttt{baseline}, \texttt{analysis}, \texttt{benchmark} y \texttt{final}.
 \end{enumerate}
 
 \titulo{9. Declaración de uso de IA}
-Se utilizó ChatGPT para estructuración, apoyo de programación, revisión y documentación. Las implementaciones y resultados se sometieron a pruebas y ejecución en Work. No se afirma escritura manual por los integrantes ni ejecución previa en su PC. Corresponde a los estudiantes revisar, comprender y reproducir el trabajo antes de entregarlo.
+Se utilizó ChatGPT para estructuración, apoyo de programación, revisión y documentación. Las implementaciones y los benchmarks se sometieron a pruebas y ejecución en Work; adicionalmente, las demos de Python y C++ fueron ejecutadas localmente en la PC del estudiante para verificar su funcionamiento y el manejo del requisito de ordenamiento. Los integrantes son responsables de revisar y comprender el trabajo antes de su sustentación.
 
 \titulo{10. Referencias}
 \referencia{Black, P. E. (2020). \textit{DADS: The on-line dictionary of algorithms and data structures} (NISTIR 8318). National Institute of Standards and Technology. \url{https://doi.org/10.6028/NIST.IR.8318}}
