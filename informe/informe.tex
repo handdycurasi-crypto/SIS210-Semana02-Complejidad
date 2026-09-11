@@ -61,33 +61,7 @@ CURASI ZEVALLOS HANDDY RONALD\par
 \titulo{1. Problema y objetivo}
 Una colección de transacciones necesita localizar \texttt{CustomerID}. Se compara recorrerla directamente con buscar en una copia previamente ordenada. El objetivo es contrastar el crecimiento teórico con sondeos y tiempos reales, incluyendo el costo de preparar el orden. Se sigue la guía de Zanabria Gálvez (2026). Aunque su portada dice C++17 y Semana 1, las instrucciones operativas corresponden a C++20 y Semana 2; se adoptan estas últimas.
 
-\titulo{2. Marco teórico: RAM, funciones de costo y cotas}
-\textbf{Tamaño de entrada.} $n$ es el número de registros almacenados, incluidos identificadores repetidos; no es la cantidad de clientes distintos. El modelo RAM asigna costo constante a acceso, asignación, aritmética y comparación. Un conteo abstracto permite estudiar el crecimiento; no representa instrucciones exactas de CPU o bytecodes de Python.
-
-\subtitulo{Derivación de la búsqueda lineal}
-Se modela un recorrido equivalente al código: inicializar $n$, índice $i=0$ y contador $ops=0$; mientras $i<n$, examinar $a[i]$, incrementar $ops$, comparar con la clave y avanzar si no coincide. Cada operación cuesta 1; incrementar una variable cuesta 2 (suma y asignación). Se consideran obtener/asignar la longitud almacenada y retornar el par como operaciones abstractas unitarias. Se incluye la instrumentación.
-\begin{center}\small
-\begin{tabular}{p{8.4cm}rr}
-\toprule
-Operación & Ausente & Éxito en visita $k$\\\midrule
-Inicializaciones de $n$, $i$ y $ops$ & 3 & 3\\
-Control $i<n$ & $n+1$ & $k$\\
-Acceso al elemento & $n$ & $k$\\
-Incremento de $ops$: suma y asignación & $2n$ & $2k$\\
-Comparación de igualdad & $n$ & $k$\\
-Incremento de $i$: suma y asignación & $2n$ & $2(k-1)$\\
-Retorno & 1 & 1\\\midrule
-Total & $7n+5$ & $7k+2$\\\bottomrule
-\end{tabular}\end{center}
-Así, $T_{\rm ausente}(n)=3+(n+1)+n+2n+n+2n+1=7n+5$. Al inicio $k=1$, el costo es constante; al final $k=n$, es $7n+2$. El contador del CSV mide solo sondeos: $n$ en ausencia y $k$ en éxito. Cambiar el convenio RAM modifica constantes, no el crecimiento. Para $n\ge1$, $7n\le7n+5\le12n$: el peor caso es $\Theta(n)$.
-
-\subtitulo{Cotas y casos son conceptos diferentes}
-Para $n\ge n_0$, $O(g(n))$ exige $T(n)\le c g(n)$; $\Omega(g(n))$ exige $T(n)\ge c g(n)$; $\Theta(g(n))$ exige ambas con constantes positivas, posiblemente distintas. Se aplican a una función de costo ya definida. Por ejemplo, el peor caso lineal es también $\Omega(n)$ y su mejor caso también es $O(1)$. No se identifica $O$ con peor, $\Omega$ con mejor ni $\Theta$ con promedio (Cormen et al., 2022).
-
-Con éxito, claves distintas y posiciones equiprobables, $E[ops]=(n+1)/2$ y el costo esperado lineal es $\Theta(n)$. Los duplicados y consultas no uniformes modifican esos supuestos. Repetir 30 veces una clave no estima el caso promedio probabilístico.
-
-\subtitulo{Búsqueda binaria}
-El orden permite descartar una mitad: $n\to n/2\to n/4\to\cdots$. Resolver $n/2^k\le1$ da $k\ge\log_2n$. Cada iteración hace trabajo constante: peor caso $\Theta(\log n)$ y mejor caso $\Theta(1)$ si coincide el primer centro. Con éxito uniforme y claves distintas, el promedio es $\Theta(\log n)$. La cota exacta de este código es $\lfloor\log_2n\rfloor+1$ sondeos para $n\ge1$; con $n=8$ puede hacer 4, precisando la aproximación de la guía. Ambas búsquedas iterativas usan $\Theta(1)$ memoria auxiliar, sin contar los datos.
+\input{marco_teorico.tex}
 
 \newpage
 \titulo{3. Dataset y preparación}
@@ -195,10 +169,15 @@ Se utilizó ChatGPT para estructuración, apoyo de programación, revisión y do
 
 \titulo{10. Referencias}
 \referencia{Black, P. E. (2020). \textit{DADS: The on-line dictionary of algorithms and data structures} (NISTIR 8318). National Institute of Standards and Technology. \url{https://doi.org/10.6028/NIST.IR.8318}}
+\referencia{Black, P. E. (2022). \textit{Binary search}. En \textit{Dictionary of Algorithms and Data Structures}. National Institute of Standards and Technology. \url{https://www.nist.gov/dads/HTML/binarySearch.html}}
 \referencia{Chen, D. (2015). \textit{Online Retail} [Conjunto de datos]. UCI Machine Learning Repository. \url{https://doi.org/10.24432/C5BW33}}
 \referencia{Cormen, T. H., Leiserson, C. E., Rivest, R. L., \& Stein, C. (2022). \textit{Introduction to algorithms} (4.ª ed.). MIT Press. \url{https://mitpress.mit.edu/9780262046305/introduction-to-algorithms/}}
 \referencia{ISO/IEC JTC1/SC22/WG21. (s. f.). \textit{Class steady\_clock [time.clock.steady]}. En \textit{C++ working draft}. Recuperado el 10 de septiembre de 2026, de \url{https://eel.is/c++draft/time.clock.steady}}
+\referencia{Knuth, D. E. (1997). \textit{The art of computer programming: Vol. 1. Fundamental algorithms} (3.ª ed.). Addison-Wesley Professional. \url{https://www.informit.com/store/art-of-computer-programming-volume-1-fundamental-algorithms-9780201896831}}
+\referencia{Levitin, A. (2012). \textit{Introduction to the design and analysis of algorithms} (3.ª ed.). Pearson. \url{https://www.pearson.com/en-gb/subject-catalog/p/introduction-to-the-design-and-analysis-of-algorithms-international-edition/P200000004735}}
+\referencia{McGeoch, C. C. (2012). \textit{A guide to experimental algorithmics}. Cambridge University Press. \url{https://doi.org/10.1017/CBO9780511843747}}
 \referencia{Python Software Foundation. (s. f.). \textit{time -- Time access and conversions}. En \textit{Python documentation}. Recuperado el 10 de septiembre de 2026, de \url{https://docs.python.org/3/library/time.html}}
+\referencia{Sedgewick, R., \& Wayne, K. (2011). \textit{Algorithms} (4.ª ed.). Addison-Wesley Professional. \url{https://algs4.cs.princeton.edu/home/}}
 \referencia{Skiena, S. S. (2020). \textit{The algorithm design manual} (3.ª ed.). Springer. \url{https://doi.org/10.1007/978-3-030-54256-6}}
 \referencia{Zanabria Gálvez, A. H. (2026). \textit{Guía de práctica de laboratorio: Semana 2. Algoritmos y Estructuras de Datos, SIS210} [Material de clase]. Universidad Nacional del Altiplano.}
 \end{document}

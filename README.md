@@ -10,11 +10,15 @@ Proyecto reproducible con búsqueda lineal y binaria manuales en Python y C++20,
 
 Objetivo: relacionar n, T(n), RAM, O/Ω/Θ y escenarios de entrada con sondeos y tiempos reales; distinguir costo de búsqueda y preparación.
 
+El informe fue ampliado académicamente con **12 núcleos teóricos** y referencias reforzadas, conservando sin cambios los resultados experimentales, CSV, gráficos y código funcional.
+
 ## Empieza aquí
 
 Para exponer, abre **GUIA_DEMO.md**: contiene una secuencia de 5 minutos. Para entregar, revisa **informe/informe.pdf**. Para comprender cada paso, lee **ANALISIS_TEORICO.md** y **PREGUNTAS_SUSTENTACION.md**.
 
-Los resultados de `resultados/` pertenecen al **entorno remoto de Work**, no a la PC del estudiante. Las demos y el benchmark C++ fueron probados en Linux con GCC; la ejecución en Windows/MSVC debe comprobarse localmente. No se incluye ni se afirma un repositorio ya publicado en GitHub.
+Los resultados de `resultados/` pertenecen al **entorno remoto de Work**, no a la PC del estudiante. Las demos se reprodujeron además en la PC del estudiante con Windows 10, Python 3.14.5 y MinGW GCC 14.2.0 incluido con Code::Blocks; se comprobó búsqueda lineal, búsqueda binaria y el rechazo de la binaria sobre datos desordenados. El benchmark conservado no fue sustituido por mediciones locales.
+
+**Repositorio publicado:** https://github.com/handdycurasi-crypto/SIS210-Semana02-Complejidad
 
 ## Estructura
 
@@ -166,4 +170,4 @@ Las tablas pueden volver a generarse con `python python/tablas_informe.py` desde
 
 Los escenarios son condicionados, las consultas repetidas calientan caché y solo se usa una muestra por n. La muestra de 500000 tiene reemplazo; los cuatro primeros tamaños también conservan duplicados de cliente. No se estima la distribución real de consultas. El tiempo pequeño de C++ está cerca del costo del reloj; no se concluye superioridad universal de un lenguaje. No se midió carga, copia ni actualizaciones en el modelo de amortización.
 
-Antes de entregar: reproducir la demo en tu PC, revisar PREGUNTAS_SUSTENTACION.md, ejecutar PLAN_COMMITS.md y publicar tu repositorio real. No se incluyen historial Git ni marcas de tiempo inventados. La declaración de asistencia de IA está en DECLARACION_IA.md.
+La demo ya fue reproducida en la PC del estudiante y el repositorio fue publicado con historial real de commits. Antes de sustentar conviene revisar `PREGUNTAS_SUSTENTACION.md` y `docs/SUSTENTACION_TRES_INTEGRANTES.md`. La declaración de asistencia de IA está en `DECLARACION_IA.md`.
